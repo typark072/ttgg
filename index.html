@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="StyleSheet.css" rel="stylesheet" type="text/css">
+	<link href="StyleSheet.css" rel="stylesheet" type="text/css">
+	<title>Ty The Garden Guy</title>
+</head>
+
+<body>
+
+	<div class="header">
+		<div class="tabs">
+		    <ul class="nav">
+                <li class= "tab active"><a href="index.html">Home</a></li>
+                <li class="tab"><a href="services.html">Services</a></li>
+				<li class="tab"><a href="products.html">Products</a></li>
+				<li class="tab"><a href="contact.html">Contact</a></li>
+            </ul>
+		</div>
+
+		<!-- search bar may not work -->
+		<div class="search-bar">
+			<input type="text" placeholder="Search...">
+			<button>Go</button>
+		</div>
+	</div>
+
+	<div id="pop-up" class="pop-up">
+		<p>Want to keep up to date on all the latest gardening trends? Join our newsletter!</p>
+		<form>
+			<input type="text" placeholder="Enter your email address">
+			<button>Submit</button>
+		</form>
+		<div class="exit" onclick="closePopUp()">x</div>
+	</div>
+	<!-- this should probably always pop up unless someone has 'submitted' a valid email -->
+	<script>
+		function closePopUp() {
+			document.getElementById("pop-up").classList.remove("visible");
+			// set a cookie to remember that the user has closed the pop-up
+			document.cookie = "popup_closed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+		}
+		setTimeout(function() {
+			// check if the user has already closed the pop-up or submitted the form
+			if (document.cookie.indexOf("popup_closed") == -1) {
+				document.getElementById("pop-up").classList.add("visible");
+			}
+		}, 5000); // 5 seconds (time before popup is active)
+	</script>
+
+<!-- these is currently hidden by the top (I think I did this) -->
+	<div class="intro">
+		<img src="images/ty.jfif" alt="Ty the Garden Guy">
+		<div>
+			<h1>Ty the Garden Guy</h1>
+			<p>Hi, I'm Ty and I'm passionate about helping people design and maintain beautiful, sustainable gardens. I offer a range of products and services, including permaculture design consultations, gardening workshops, and online courses. Take a look at my offerings and let me know how I can help you bring your gardening dreams to life.</p>
+		</div>
+	</div>
+	<div class="services">
+		<div class="service">
+			<img src="images/2.jpg" alt="Permaculture Consultation">
+			<h2>Permaculture Consultation</h2>
+					<p>Need help designing a sustainable and productive garden? I offer permaculture design consultations to help you create a beautiful and functional space that works with nature. Whether you have a small backyard or a large farm, I can help you create a design that meets your needs and goals.</p>
+		</div>
+		<div class="service">
+			<img src="images/3.jpg" alt="Gardening Workshop">
+			<h2>Gardening Workshop</h2>
+			<p>Join me for a hands-on gardening workshop where you'll learn the skills and knowledge you need to successfully grow your own food. From soil preparation to plant selection to pest control, I'll cover everything you need to know to create a thriving garden. Workshops are offered in-person and online, so you can choose the option that works best for you.</p>
+		</div>
+		<div class="service">
+			<img src="images/4.jpg" alt="Online Course">
+			<h2>Online Course</h2>
+			<p>Can't make it to a workshop in person? No problem! I offer a range of online courses that cover everything from permaculture principles to garden design to plant care. These courses are self-paced, so you can learn at your own pace and on your own schedule. Sign up today and start your journey to becoming a successful gardener.</p>
+		</div>
+	</div>
+	<div class="testimonials">
+		<div class="testimonial">
+			<img src="images/5.jpg" alt="Before and After">
+			<h2>Transformed my Garden</h2>
+			<p>"Ty the Garden Guy has completely transformed my garden. I was struggling to keep anything alive, but with his help, I now have a thriving and beautiful space that provides me with fresh food all season long. I highly recommend his services to anyone looking to create a sustainable and productive garden." - Jane D.</p>
+		</div>
+		<div class="testimonial">
+			<img src="images/6.jpg" alt="Before and After">
+			<h2>Amazing Results</h2>
+			<p>"I was skeptical at first, but working with Ty has been a game-changer. His knowledge and expertise have helped me create a garden that is not only beautiful, but also produces an abundance of fresh fruits and vegetables. The results have been amazing, and I can't thank him enough for all his help." - Tom S.</p>
+		</div>
+	</div>
+
+	<!-- these should probably be in a grid format -->
+	<div class="tiktok-videos">
+		<!-- TikTok embed code -->
+		<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tythegardenguy/video/7182920084262898987" data-video-id="7182920084262898987" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@tythegardenguy" href="https://www.tiktok.com/@tythegardenguy?refer=embed">@tythegardenguy</a> Join me live😁 <a title="live" target="_blank" href="https://www.tiktok.com/tag/live?refer=embed">#live</a> <a title="durianfruit" target="_blank" href="https://www.tiktok.com/tag/durianfruit?refer=embed">#durianfruit</a> <a title="firsttime" target="_blank" href="https://www.tiktok.com/tag/firsttime?refer=embed">#firsttime</a> <a title="exoticfruits" target="_blank" href="https://www.tiktok.com/tag/exoticfruits?refer=embed">#exoticfruits</a> <a title="tytries" target="_blank" href="https://www.tiktok.com/tag/tytries?refer=embed">#tytries</a> <a target="_blank" title="♬ original sound - WanderingAndLost" href="https://www.tiktok.com/music/original-sound-7074766730593078059?refer=embed">♬ original sound - WanderingAndLost</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+		<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tythegardenguy/video/7179622164033981742" data-video-id="7179622164033981742" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@tythegardenguy" href="https://www.tiktok.com/@tythegardenguy?refer=embed">@tythegardenguy</a> Replying to @thefitfoodiegardener <a target="_blank" title="♬ Pretty Girl Era - LU KALA" href="https://www.tiktok.com/music/Pretty-Girl-Era-7127800191360551686?refer=embed">♬ Pretty Girl Era - LU KALA</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>	
+		<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tythegardenguy/video/7178557653344374058" data-video-id="7178557653344374058" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@tythegardenguy" href="https://www.tiktok.com/@tythegardenguy?refer=embed">@tythegardenguy</a> 🐩 or 🐈  let me know in the comments which is better and why <a title="strudelthegoldendoodle" target="_blank" href="https://www.tiktok.com/tag/strudelthegoldendoodle?refer=embed">#strudelthegoldendoodle</a> <a title="sorrelsoup" target="_blank" href="https://www.tiktok.com/tag/sorrelsoup?refer=embed">#sorrelsoup</a> <a title="chickenlife🐓" target="_blank" href="https://www.tiktok.com/tag/chickenlife%F0%9F%90%93?refer=embed">#chickenlife🐓</a> <a target="_blank" title="♬ Thunder Sound - Tmsoft&#39;s White Noise Sleep Sounds" href="https://www.tiktok.com/music/Thunder-Sound-6755226794120448002?refer=embed">♬ Thunder Sound - Tmsoft&#39;s White Noise Sleep Sounds</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+	</div>
+</body>
+</html>
