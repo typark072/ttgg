@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="styleReset.css" rel="stylesheet" type="text/css">
+	<link href="StyleSheet.css" rel="stylesheet" type="text/css">
+	<title>Ty The Garden Guy</title>
+	<meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>jQuery UI Datepicker - Default functionality</title>
+	  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	  <link rel="stylesheet" href="/resources/demos/style.css">
+	  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	  <script>
+	  $( function() {
+		$( "#datepicker" ).datepicker();
+	  } );
+	  </script>
+</head>
+
+<!-- you may want to handle this as a series of HTML pages -->
+<body>
+
+	<div class="header">
+		<div class="tabs">
+		    <ul class="nav">
+                <li class= "tab"><a href="index.html">Home</a></li>
+                <li class="tab"><a href="services.html">Services</a></li>
+				<li class="tab"><a href="products.html">Products</a></li>
+				<li class="tab active"><a href="contacts.html">Contact</a></li>
+            </ul>
+		</div>
+
+		<!-- search bar may not work -->
+		<div class="search-bar">
+			<input type="text" placeholder="Search...">
+			<button>Go</button>
+		</div>
+	</div>
+	<!-- Contact page layout -->
+<div class="contact-page">
+	<!-- Page heading -->
+	<h1>Contact Us</h1>
+	
+	<!-- Page text -->
+	<p>Thank you for visiting our website! If you have any questions or would like to schedule a consultation, please fill out the form below and we will get back to you as soon as possible. We look forward to helping you with your gardening and permaculture needs.</p>
+	
+	<!-- Contact form -->
+	<form action="mailto:tythegardenguy@gmail.com" method="post" enctype="text/plain">
+		<!-- Form fields -->
+		<label for="name">Name:</label><br>
+		<input type="text" id="name" name="name"><br>
+		<label for="email">Email:</label><br>
+		<input type="text" id="email" name="email"><br>
+		<label for="message">Message:</label><br>
+		<textarea id="message" name="message"></textarea><br>
+		
+		<!-- Form submit button -->
+		<input type="submit" value="Send">
+	</form> 
+</div>
+</body>
+</html>
