@@ -342,7 +342,7 @@ body {
 	background-color: #fff;
 	transition: background-color .25s;
 }
-/* Style the shopping cart icon */
+		/* Style the shopping cart icon */
 			i.fa-shopping-cart {
 				font-size: 24px;
 				color: #333;
@@ -485,7 +485,7 @@ body {
     }
 
     #score {
-      font-size: 16px;
+      font-size: 36px;
       font-weight: bold;
       color: rgb(130, 130, 130);
       margin-right: 20px;
