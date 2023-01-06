@@ -168,27 +168,6 @@ body {
 	line-height: 1.5;
 }
 
-.pop-upcookies {
-	position: ;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 200px;
-	height: 200px;
-	background-color: #fff;
-	font-family: 'Serif', sans-serif;
-	color: #fa8072;
-	font-size: 12px;
-	padding: 20px;
-}
-.pop-upcookies .exit {
-	position: absolute;
-	top: 0;
-	right: 0;
-	font-size: 24px;
-	cursor: pointer;
-	}
-
 .pop-up {
 	position: fixed;
 	top: 50%;
@@ -546,4 +525,98 @@ body {
       pointer-events: auto;
       opacity: 1;
     }
+	
+/*Footer*/
+.footer {
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FFFFF4;
+  font-family: 'Merriweather', sans-serif;
+  color: #228b22;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+/* CSS for styling the social media buttons */
+#socialbuttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#socialbuttons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #333333;
+  transition: all 0.3s ease;
+}
+
+#socialbuttons a:hover {
+  color: #0077C9;
+}
+
+#socialbuttons .instagram {
+  background-color: #E4405F;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+#socialbuttons .tiktok {
+  background-color: #E4405F;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+#socialbuttons .discord {
+  background-color: #E4405F;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.footer p {
+	background-color: #FFFFF4;
+	font-family: 'Merriweather', sans-serif;
+	color: #228b22;
+	margin: 15px 0 10px 0;
+	font-size: 1rem;
+	font-weight: 300;
+}
+/* Style the privacy policy link */
+#privacy-policy-link {
+  color: #228b22;
+  background-color: #FFFFF4;
+  font-family: 'Merriweather', sans-serif;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+#privacy-policy-link:hover {
+  color: #eeeeee;
+}
+
 	</style>
