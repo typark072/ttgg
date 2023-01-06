@@ -3,13 +3,14 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 25px;
-	background-color: #fff;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 20px;
-	z-index: 2;
+	height: 100px;
+	background-color: #D1FEB8;
+	background-size: cover;
+	z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 .header .tabs {
 	display: flex;
@@ -53,36 +54,16 @@
 .header .search-bar button:active {
 	transform: translateY(2px);
 }
-.parallax {
-	height: 50px;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-.parallax.products {
-	background-image: url("https://i.imgur.com/CkLZjKd.jpg");
-}
-.parallax.services {
-	background-image: url("https://i.imgur.com/lJ6N3x6.jpg");
-}
-.parallax.about {
-	background-image: url("https://i.imgur.com/R0K0rvO.jpg");
-}
-.parallax.contact {
-	background-image: url("https://i.imgur.com/w7KMhDG.jpg");
-}
 
 body {
-	padding-top: 100px;
+	padding-top: 150px;
 	background-color: #FFFFF4;
 	font-family: 'Merriweather', sans-serif;
 	color: #228b22;
+	margin: 0;
+	padding: 100px;
 }
-.header {
-	background-image: url('images/1.jpg');
-	background-size: cover;
-	height: 100px;
-}
+
 .nav {
 	display: flex;
 	justify-content: flex-end;
@@ -209,21 +190,21 @@ body {
 	}
 
 .pop-up {
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 350px;
-height: 300px;
-background-color: #fff;
-font-family: 'Angelina', sans-serif;
-font-size: 32px;
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-opacity: 0;
-transition: opacity 0.5s;
-}
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 350px;
+	height: 300px;
+	background-color: #fff;
+	font-family: 'Angelina', sans-serif;
+	font-size: 32px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+	transition: opacity 0.5s;
+	}
 .pop-up.visible {
 	opacity: 1;
 }
@@ -260,30 +241,25 @@ transition: opacity 0.5s;
 	font-size: 24px;
 	cursor: pointer;
 }
+/* CSS for styling the cookies pop-up */
+#cookiespopup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-family: "Merriweather", serif;
+  text-align: center;
+  border-radius: 5px;
+}
 
-.pop-upcookies {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background-color: #89CFF0;
-    font-family: 'Merriweather', serif;
-    font-size: 24px;
-    color: #FF0000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    border-radius: 5px 5px 0 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-.pop-upcookies p {
-    margin: 0;
-}
-.pop-upcookies .exit {
-    font-size: 18px;
-    cursor: pointer;
+#cookiespopup button {
+  border: none;
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .product-grid {
@@ -411,100 +387,15 @@ transition: opacity 0.5s;
 		.tiktok-video {
 			/* Set the width of each TikTok video */
 			width: 300px;
+			height: 300px;
 			
 			/* Set the display property to inline-block to make the TikTok videos display horizontally */
 			display: inline-block;
-		}
-		.tiktok-slider {
-			/* Set the width of the TikTok video container to fit all of the TikTok videos */
-			width: 900px; /* Adjust this value as needed */
-			overflow-x: scroll;
-			
-			/* Add some padding to the TikTok video container */
-			padding: 20px;
-			
-			/* Add a border and rounded corners to the TikTok video container */
-			border: 2px solid #000;
-			border-radius: 10px;
-		}
-
-		/* Style the TikTok videos */
-		.tiktok-video {
-			/* Set the width and height of each TikTok video */
-			width: 300px;
-			height: 300px;
-			
 			/* Add some margin between each TikTok video */
 			margin: 0 10px;
 			
-			/* Add a border and rounded corners to each TikTok video */
-			border: 2px solid #000;
-			border-radius: 10px;
 		}
 
-		/* Style the left arrow button */
-		.tiktok-slider-button.left {
-			/* Set the position of the left arrow button */
-			position: absolute;
-			top: calc(50% - 20px);
-			left: -40px;
-			
-			/* Set the appearance of the left arrow button */
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 40px;
-			height: 40px;
-			background-color: #fff;
-			border: 2px solid #000;
-			border-radius: 50%;
-			font-size: 24px;
-			cursor: pointer;
-			
-			/* Hide the left arrow button when it is not needed */
-			visibility: hidden;
-			opacity: 0;
-			transition: visibility 0s, opacity 0.5s linear;
-		}
-
-		/* Style the right arrow button */
-		.tiktok-slider-button.right {
-			/* Set the position of the right arrow button */
-			position: absolute;
-			top: calc(50% - 20px);
-			right: -40px;
-			
-			/* Set the appearance of the right arrow button */
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 40px;
-			height: 40px;
-			background-color: #fff;
-			border: 2px solid #000;
-			border-radius: 50%;
-			font-size: 24px;
-			cursor: pointer;
-			
-			/* Hide the right arrow button when it is not needed */
-			visibility: hidden;
-			opacity: 0;
-			transition: visibility 0s, opacity 0.5s linear;
-		}
-
-		/* Show the left arrow button when the TikTok video container is scrolled to the left */
-		.tiktok-slider::-webkit-scrollbar-thumb:horizontal:start {
-			visibility: visible;
-			opacity: 1;
-			transition: visibility 0s, opacity 0.5s linear;
-		}
-
-		/* Show the right arrow button when the TikTok video container is scrolled to the right */
-		.tiktok-slider::-webkit-scrollbar-thumb:horizontal:end {
-			visibility: visible;
-			opacity: 1;
-			transition: visibility 0s, opacity 0.5s linear;
-		}
 		/* Contact page layout */
 		.contact-page {
 			/* Add some padding and a background color to the contact page */
@@ -586,21 +477,6 @@ transition: opacity 0.5s;
 		}
 	}
 }
-
-	body {
-		  background-color: rgb(241, 233, 210);
-		  margin: 0;
-		  padding: 0;
-		}
-
-    header {
-      background-color: white;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 20px;
-    }
 
     .logo {
       font-size: 24px;

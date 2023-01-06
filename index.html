@@ -8,7 +8,8 @@
 </head>
 
 <body>
-
+	<header id="header">
+	<div id="header-content">
 	<div class="header">
 		<div class="tabs">
 		    <ul class="nav">
@@ -25,7 +26,8 @@
 			<button>Go</button>
 		</div>
 	</div>
-
+	</div>
+	</header>
 	<div id="pop-up" class="pop-up">
 		<p>Want to keep up to date on all the latest gardening trends? Join our newsletter!</p>
 		<form>
@@ -90,9 +92,6 @@
 	<!-- these should probably be in a grid format -->
 	<!-- Add the TikTok videos in the body of your HTML document -->
 	<!-- Add a container element for the TikTok videos -->
-	<div class="tiktok-slider">
-		<!-- Add a left arrow button -->
-		<button class="tiktok-slider-button left">&#8592;</button>
 		
 		<!-- Add a container element for each TikTok video -->
 		<div class="tiktok-video">
@@ -107,46 +106,32 @@
 		</div>
 		<div class="tiktok-video">
 			<!-- TikTok embed code -->
-			<div class="tiktok-video">
-	<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tythegardenguy/video/7137993436581367082" data-video-id="7137993436581367082" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@tythegardenguy" href="https://www.tiktok.com/@tythegardenguy?refer=embed">@tythegardenguy</a> Replying to @user64543246279403 Also, right now is the time to get your spring garden ready! (Yes you read that right) <a title="beginnergardenertips" target="_blank" href="https://www.tiktok.com/tag/beginnergardenertips?refer=embed">#beginnergardenertips</a> <a title="controlweeds" target="_blank" href="https://www.tiktok.com/tag/controlweeds?refer=embed">#controlweeds</a> <a title="bestgardenhack" target="_blank" href="https://www.tiktok.com/tag/bestgardenhack?refer=embed">#bestgardenhack</a> <a target="_blank" title="♬ original sound - Ty The Garden Guy" href="https://www.tiktok.com/music/original-sound-7137993371418643242?refer=embed">♬ original sound - Ty The Garden Guy</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script> 
-</div>
-		<div class="tiktok-video">
-			<!-- TikTok embed code -->
 			<div>
 			<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tythegardenguy/video/7120763854312951086" data-video-id="7120763854312951086" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@tythegardenguy" href="https://www.tiktok.com/@tythegardenguy?refer=embed">@tythegardenguy</a> Thanks @grubblyfarms for letting us try the fresh pecks sustainable chicken feed! <a title="grubblyhappyhour" target="_blank" href="https://www.tiktok.com/tag/grubblyhappyhour?refer=embed">#grubblyhappyhour</a> <a title="grubblyfarms" target="_blank" href="https://www.tiktok.com/tag/grubblyfarms?refer=embed">#grubblyfarms</a> <a title="backyardchickens" target="_blank" href="https://www.tiktok.com/tag/backyardchickens?refer=embed">#backyardchickens</a> <a target="_blank" title="♬ original sound - Ty The Garden Guy" href="https://www.tiktok.com/music/original-sound-7120763836864547627?refer=embed">♬ original sound - Ty The Garden Guy</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script></div>
 		</div>
-		
-		<!-- Add a right arrow button -->
-		<button class="tiktok-slider-button right">&#8594;</button>
+		<div class="tiktok-video">
+			<!-- TikTok embed code -->
+			<div class="tiktok-video">
+		<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tythegardenguy/video/7137993436581367082" data-video-id="7137993436581367082" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@tythegardenguy" href="https://www.tiktok.com/@tythegardenguy?refer=embed">@tythegardenguy</a> Replying to @user64543246279403 Also, right now is the time to get your spring garden ready! (Yes you read that right) <a title="beginnergardenertips" target="_blank" href="https://www.tiktok.com/tag/beginnergardenertips?refer=embed">#beginnergardenertips</a> <a title="controlweeds" target="_blank" href="https://www.tiktok.com/tag/controlweeds?refer=embed">#controlweeds</a> <a title="bestgardenhack" target="_blank" href="https://www.tiktok.com/tag/bestgardenhack?refer=embed">#bestgardenhack</a> <a target="_blank" title="♬ original sound - Ty The Garden Guy" href="https://www.tiktok.com/music/original-sound-7137993371418643242?refer=embed">♬ original sound - Ty The Garden Guy</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script> 
+		</div>
+	</div>
+		<!-- HTML for the cookies pop-up -->
+	<div id="cookiespopup">
+	  <p>This website uses cookies to ensure you get the best experience on our website. By continuing to use this site, you consent to our use of cookies. 
+	  <button id="acceptbutton">Accept</button>
 	</div>
 	<script>
-	// Get the TikTok slider container element
-	const tiktokSlider = document.querySelector('.tiktok-slider');
+	// JavaScript for showing and hiding the cookies pop-up
+		window.onload = function() {
+		  setTimeout(function() {
+			document.getElementById("cookiespopup").style.display = "block";
+		  }, 2000); // Show the cookies pop-up after 2 seconds
+		};
 
-	// Get the left arrow button
-	const leftButton = tiktokSlider.querySelector('.left');
+		document.getElementById("acceptbutton").onclick = function() {
+		  document.getElementById("cookiespopup").style.display = "none";
+		};
+		</script>
 
-	// Get the right arrow button
-	const rightButton = tiktokSlider.querySelector('.right');
-
-	// Add a click event listener to the left arrow button
-	leftButton.addEventListener('click', () => {
-		// Get the current position of the TikTok videos
-		const currentPosition = tiktokSlider.scrollLeft;
-		
-		// Scroll the TikTok videos to the left by 300px (the width of each TikTok video)
-		tiktokSlider.scrollTo({ left: currentPosition - 300, behavior: 'smooth' });
-	});
-
-	// Add a click event listener to the right arrow button
-	rightButton.addEventListener('click', () => {
-		// Get the current position of the TikTok videos
-		const currentPosition = tiktokSlider.scrollLeft;
-		
-		// Scroll the TikTok videos to the right by 300px (the width of each TikTok video)
-		tiktokSlider.scrollTo({ left: currentPosition + 300, behavior: 'smooth' });
-	});
-	</script>
-
-</body>
+	</body>
 </html>

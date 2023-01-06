@@ -5,23 +5,12 @@
 	<link href="styleReset.css" rel="stylesheet" type="text/css">
 	<link href="StyleSheet.css" rel="stylesheet" type="text/css">
 	<title>Ty The Garden Guy</title>
-	<meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <title>jQuery UI Datepicker - Default functionality</title>
-	  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-	  <link rel="stylesheet" href="/resources/demos/style.css">
-	  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-	  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-	  <script>
-	  $( function() {
-		$( "#datepicker" ).datepicker();
-	  } );
-	  </script>
 </head>
 
 <!-- you may want to handle this as a series of HTML pages -->
 <body>
-
+	<header id="header">
+	<div id="header-content">
 	<div class="header">
 		<div class="tabs">
 		    <ul class="nav">
@@ -38,6 +27,20 @@
 			<button>Go</button>
 		</div>
 	</div>
+	</div>
+	</header>
+	<meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>jQuery UI Datepicker - Default functionality</title>
+	  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	  <link rel="stylesheet" href="/resources/demos/style.css">
+	  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	  <script>
+	  $(function() {
+		$( "#datepicker" ).datepicker();
+	  } );
+	  </script>
 	<form id="virtual-meeting-request-form" action="/process-request" method="post">
 	<!-- Name field -->
 	<label for="name">Name:</label><br>
@@ -71,51 +74,51 @@
 	
 	<!-- Submit button -->
 	<button type="submit" id="reservenowbutton">Reserve Now</button>
-<script>
-$(function() {
-	// Initialize the form validation
-	$('#virtual-meeting-request-form').validate({
-		// Set validation rules
-		rules: {
-			name: {
-				required: true,
-				minlength: 2
+	<script>
+	$(function() {
+		// Initialize the form validation
+		$('#virtual-meeting-request-form').validate({
+			// Set validation rules
+			rules: {
+				name: {
+					required: true,
+					minlength: 2
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				date: {
+					required: true,
+					date: true
+				},
+				time: {
+					required: true
+				}
 			},
-			email: {
-				required: true,
-				email: true
+			// Set error messages
+			messages: {
+				name: {
+					required: "Please enter your name",
+					minlength: "Your name must be at least 2 characters long"
+				},
+				email: {
+					required: "Please enter your email",
+					email: "Please enter a valid email"
+				},
+				date: {
+					required: "Please select a date",
+					date: "Please select a valid date"
+				},
+				time: {
+					required: "Please select a time"
+				}
 			},
-			date: {
-				required: true,
-				date: true
-			},
-			time: {
-				required: true
+			// Set the error placement
+			errorPlacement: function(error, element) {
+				error.insertAfter(element);
 			}
-		},
-		// Set error messages
-		messages: {
-			name: {
-				required: "Please enter your name",
-				minlength: "Your name must be at least 2 characters long"
-			},
-			email: {
-				required: "Please enter your email",
-				email: "Please enter a valid email"
-			},
-			date: {
-				required: "Please select a date",
-				date: "Please select a valid date"
-			},
-			time: {
-				required: "Please select a time"
-			}
-		},
-		// Set the error placement
-		errorPlacement: function(error, element) {
-			error.insertAfter(element);
-		}
-	});
+		});
 	</script>
 
 	<script>
